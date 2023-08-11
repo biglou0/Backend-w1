@@ -1,4 +1,5 @@
 const Contact  = require("../Models/Contact")
+const nodemailer = require('nodemailer');
  
 exports.add = async (req, res) => {
     const {Nom, Prenom, Email,Cin, Tel , Message} = req.body
@@ -42,9 +43,9 @@ async function sendConfirmationEmail(Email) {
 
   
     const mailOptions = {
-      from: 'Transport_APP<testrapide45@gmail.com>',
+      from: 'TunisieUber<testrapide45@gmail.com>',
       to: Email,
-      subject: 'Transport_APP Compte Pour Chauffeur ',
+      subject: 'TunisieUber Réclamation ',
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family:arial, 'helvetica neue', helvetica, sans-serif">
       <head>

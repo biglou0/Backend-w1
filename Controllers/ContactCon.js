@@ -9,7 +9,6 @@ exports.add = async (req, res) => {
         Nom,
         Prenom,
         Email,
-        Cin,
         Tel,
         Message,
         status:"En_cours",

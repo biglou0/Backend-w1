@@ -254,9 +254,9 @@ const register = async (req, res) => {
       <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://viewstripo.email"
       style="height:41px; v-text-anchor:middle; width:153px" arcsize="50%" stroke="f" fillcolor="#ff6e12">
       <w:anchorlock></w:anchorlock>
-      <center style='color:#ffffff; font-family:"Josefin Sans", helvetica, arial, sans-serif; font-size:15px; font-weight:400; line-height:15px; mso-text-raise:1px'>Order Food</center>
+
       </v:roundrect></a>
-      <![endif]--><!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-style:solid;border-color:#2CB543;background:#ff6e12;border-width:0px;display:inline-block;border-radius:30px;width:auto;mso-hide:all"><a href="https://viewstripo.email" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;display:inline-block;background:#FF6E12;border-radius:30px;font-family:'Josefin Sans', helvetica, arial, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center;padding:10px 20px 10px 20px;mso-padding-alt:0;mso-border-alt:10px solid #ff6e12">Order Food</a></span><!--<![endif]--></td>
+
       </tr>
       </table></td>
       </tr>
@@ -625,9 +625,9 @@ async function sendpassword(Email ,Password , chauffeurName) {
     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://viewstripo.email"
     style="height:41px; v-text-anchor:middle; width:153px" arcsize="50%" stroke="f" fillcolor="#ff6e12">
     <w:anchorlock></w:anchorlock>
-    <center style='color:#ffffff; font-family:"Josefin Sans", helvetica, arial, sans-serif; font-size:15px; font-weight:400; line-height:15px; mso-text-raise:1px'>Order Food</center>
+
     </v:roundrect></a>
-    <![endif]--><!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-style:solid;border-color:#2CB543;background:#ff6e12;border-width:0px;display:inline-block;border-radius:30px;width:auto;mso-hide:all"><a href="https://viewstripo.email" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;display:inline-block;background:#FF6E12;border-radius:30px;font-family:'Josefin Sans', helvetica, arial, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center;padding:10px 20px 10px 20px;mso-padding-alt:0;mso-border-alt:10px solid #ff6e12">Order Food</a></span><!--<![endif]--></td>
+
     </tr>
     </table></td>
     </tr>

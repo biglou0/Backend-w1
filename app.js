@@ -43,7 +43,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 const corsOptions ={
-  origin:'https://sprightly-cannoli-b7f795.netlify.app', 
+  origin:'https://frontwebpfe.vercel.app', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }

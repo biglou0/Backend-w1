@@ -327,6 +327,7 @@ const login = (req, res) => {
               Nom: user.Nom,
               address: user.address,
               Prenom: user.Prenom,
+              Cstatus: user.Cstatus,
               photoAvatar: user.photoAvatar
             });
           } else {
@@ -353,6 +354,10 @@ const login = (req, res) => {
     const photoPermisVerUrl = req.uploadedFiles.photoPermisVer ;
     const photoVtcUrl = req.uploadedFiles.photoVtc ;
     const photoCinUrl = req.uploadedFiles.photoCin ;
+
+
+
+    
     let updateData ={
 
   
@@ -362,6 +367,7 @@ const login = (req, res) => {
         phone : req.body.phone,
         photoAvatar : photoAvatarUrl,
         photoCin : photoCinUrl,
+        password: bcrypt.hashSync(req.body.password, 10),
         photoPermisRec : photoPermisRecUrl,
         photoPermisVer : photoPermisVerUrl,
         photoVtc : photoVtcUrl,
@@ -726,8 +732,26 @@ const destroy = async (req, res) => {
         return res.status(500).send({ error: error });
       }
     };
+
+    const  searchuse = async(req,res) => {
+      const id = req.params.id;
+      Chauffeur.findById(id)
+        .then(data => {
+          if (!data)
+            res.status(404).send({ message: "Agent introuvable pour id " + id });
+          else res.send(data);
+          console.log(data)
+        })
+        .catch(err => {
+          res
+            .status(500)
+            .send({ message: "Erreur recuperation Agent avec id=" + id });
+        });
+
+        
+    }
     
 
   module.exports ={
-    register, login,destroy,update,updatestatus,updatestatuss,resetPassword
+    register, login,destroy,update,updatestatus,updatestatuss,resetPassword,searchuse
     }

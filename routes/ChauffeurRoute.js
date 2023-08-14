@@ -47,6 +47,10 @@ router.put('/updatechauf/:id',Multer.fields([
 
 router.post('/loginch',ChauffContro.login)
 
+
+
+router.get('/searchchauf/:id', ChauffContro.searchuse);
+
 //router.get('/getAg', AuthController.recupereruse);
 // router.put('/updatechauf/:id',Multer.single("photoAvatar"),UploadImage, ChauffContro.update);
 router.put('/updatestatus/:id', ChauffContro.updatestatus);

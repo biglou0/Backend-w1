@@ -30,7 +30,7 @@ const ChauffSchema = new mongoose.Schema(
         },
         phone: {
             type: String,
-            required: [true, 'Please provide your phone'],
+            // required: [true, 'Please provide your phone'],
             
             unique: true
         },

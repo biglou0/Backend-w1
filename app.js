@@ -44,7 +44,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 const corsOptions ={
   origin:'https://frontwebpfe.vercel.app', 
-  origin:'http://localhost:3000',
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }

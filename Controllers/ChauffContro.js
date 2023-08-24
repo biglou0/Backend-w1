@@ -367,7 +367,6 @@ const login = (req, res) => {
         phone : req.body.phone,
         photoAvatar : photoAvatarUrl,
         photoCin : photoCinUrl,
-        password: bcrypt.hashSync(req.body.password, 10),
         photoPermisRec : photoPermisRecUrl,
         photoPermisVer : photoPermisVerUrl,
         photoVtc : photoVtcUrl,
@@ -396,6 +395,49 @@ const login = (req, res) => {
 })
 
 }
+/**----------------Update password------------------ */
+const UpPass = async (req, res, next) => {
+  const { id } = req.params;
+  const {oldPassword,newPassword} = req.body;
+  console.log('ID:', id);
+  console.log('Old Password:', oldPassword);
+  console.log('New Password:', newPassword);
+  try {
+    const chauffeur = await Chauffeur.findById(id);
+
+    if (!chauffeur) {
+      return res.status(404).json({
+        message: 'Chauffeur not found',
+      });
+    }
+
+    const passwordMatch = await bcrypt.compare(oldPassword, chauffeur.password);
+
+    if (!passwordMatch) {
+      return res.status(401).json({
+        message: 'Old password is incorrect',
+      });
+    }
+
+    const newPasswordHash = bcrypt.hashSync(newPassword, 10);
+
+    const updateData = {
+      password: newPasswordHash,
+    };
+
+    await Chauffeur.findByIdAndUpdate(id, { $set: updateData });
+
+    return res.json({
+      message: 'Chauffeur password updated successfully!',
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: 'Error updating chauffeur password',
+    });
+  }
+};
+
+/**-------------------end---------------------------- */
 
 const updatestatus = async (req, res, next) => {
   const { id } = req.params;
@@ -753,5 +795,5 @@ const destroy = async (req, res) => {
     
 
   module.exports ={
-    register, login,destroy,update,updatestatus,updatestatuss,resetPassword,searchuse
+    register, login,destroy,update,updatestatus,updatestatuss,resetPassword,searchuse ,UpPass
     }

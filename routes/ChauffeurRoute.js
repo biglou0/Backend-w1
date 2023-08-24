@@ -46,6 +46,7 @@ router.put('/updatechauf/:id',Multer.fields([
 
 
 router.post('/loginch',ChauffContro.login)
+router.put('/pass/:id',ChauffContro.UpPass)
 
 
 
